@@ -17,6 +17,7 @@ def detect():
     request_matrix = np.array(data['request']).reshape(processes, resources)
 
     deadlock_detected, message = deadlock.detect_deadlock(processes, resources, allocation, request_matrix)
+    deadlock_detected, message = deadlock.detect_deadlock(processes, resources, allocation, request_matrix)
 
     return jsonify({"deadlock": deadlock_detected, "message": message})
 
